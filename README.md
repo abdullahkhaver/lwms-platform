@@ -1,1 +1,1 @@
-LWMS SYSTEM
+Local Waste Management System
