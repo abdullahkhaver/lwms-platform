@@ -29,7 +29,7 @@ router.get("/me", protect, getMe);
 router.put("/me", protect, updateMe);
 
 
-// ================= ADMIN ONLY =================
+// ================= ADMIN ONLY ============
 router.get("/users", protect, adminOnly, getAllUsers);
 router.get("/users/:id", protect, adminOnly, getUserById);
 router.put("/users/:id/role", protect, adminOnly, updateUserRole);

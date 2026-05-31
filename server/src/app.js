@@ -6,6 +6,7 @@ import cookieParser from 'cookie-parser';
 import { rateLimit } from 'express-rate-limit';
 //routes
 import authRoutes from './routes/auth.routes.js';
+import complaintRoutes from './routes/complaint.routes.js';
 
 
 const app = express();
@@ -27,6 +28,7 @@ const limiter = rateLimit({
 app.use(limiter);
 
 app.use('/api/auth', authRoutes);
+app.use('/api/complaints', complaintRoutes);
 
 app.get('/api/health', (req, res) => {
   res.status(200).json({ success: true, message: 'Server is running' });
